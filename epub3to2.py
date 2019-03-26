@@ -1,7 +1,7 @@
 import os, fnmatch
 
 listOfFiles = os.listdir('.')  
-pattern = "*.py"  
+pattern = "*.epub"  
 for entry in listOfFiles:  
     if fnmatch.fnmatch(entry, pattern):
-            print (entry)
+        os.rename(entry, entry+'zip')
